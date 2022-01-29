@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multichain</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <div class="container-fluid px-0 px-lg-5">
+            <a class="navbar-brand" href="#" target="_blank">
+                <img src="img/logo1.png" alt="multichain logo" class="first-logo">
+                <img src="img/logo2.png" alt="multichain logo" class="second-logo">
+            </a>
+
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="mode_icon show_mobile me-2">
+                    <img src="img/day.svg" alt="mode icon">
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto d-none d-lg-flex mb-2 mb-md-0 px-4">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">MULTI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Router</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Pool</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Explorer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Support</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center connect_button">
+                    <button class="btn btn-secondary me-2" type="button" data-bs-toggle="modal"
+                        data-bs-target="#mainnetModal">
+                        <img src="img/chains/eth.svg" alt="Etherium" class="icon_img">
+                        Etherium
+                    </button>
+
+                    <button class="btn btn-primary" type="button" data-bs-toggle="modal"
+                        data-bs-target="#connectWalletModal">Connect to a wallet</button>
+
+                    <div class="mode_icon hide_mobile">
+                        <img src="img/day.svg" alt="mode icon">
+                    </div>
+                </div>
+            </div>
+
+            <ul class="navbar-nav me-auto mb-0 px-4 d-flex flex-row justify-content-between d-lg-none">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">MULTI</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Router</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Pool</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Explorer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Support</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="wrapper px-3 px-md-4 px-lg-5">
+        <div class="container all_tokens_container">
+            <table class="table mb-0">
+                <thead class="table_head">
+                    <tr>
+                        <th class="text-start">Tokens</th>
+                        <th class="text-start chains hideSmall">Chains</th>
+                        <th class="text-end">Liquidity</th>
+                        <th class="text-center">Details</th>
+                    </tr>
+                </thead>
+
+                <!-- MIM -->
+                <tbody class="table_body">
+                    <tr class="collapsing_tr collapsed" data-bs-toggle="collapse" data-bs-target="#chain_list_0"
+                        aria-expanded="false" aria-controls="chain_list_0">
+                        <td width="150" class="text-start">
+                            <div class="token_column">
+                                <div class="token_img_container">
+                                    <img src="img/chains/mim.webp" alt="MIM" class="token_img">
+                                </div>
+                                <div class="token_text">
+                                    <h3>MIM</h3>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td class="text-start hideSmall">
+                            <div class="chain_column">
+                                <div title="ETH" class="chain_img_container">
+                                    <img alt="ETH" src="img/chains/eth.svg" class="icon_img">
+                                </div>
+                                <div title="BNB" class="chain_img_container">
+                                    <img alt="BNB" src="img/chains/bnb.svg" class="icon_img">
+                                </div>
+                                <div title="MATIC" class="chain_img_container">
+                                    <img alt="MATIC" src="img/chains/polygon.png" class="icon_img">
+                                </div>
+                                <div title="FTM" class="chain_img_container">
+                                    <img alt="FTM" src="img/chains/ftm.png" class="icon_img">
+                                </div>
+                                <div title="OETH" class="chain_img_container">
+                                    <img alt="OETH" src="img/chains/oeth.png" class="icon_img">
+                                </div>
+                                <div title="MOVR" class="chain_img_container">
+                                    <img alt="MOVR" src="img/chains/movr.png" class="icon_img">
+                                </div>
+                                <div title="ARBITRUM" class="chain_img_container">
+                                    <img alt="ARBITRUM" src="img/chains/arbitrum.png" class="icon_img">
+                                </div>
+                                <div title="AVAX" class="chain_img_container">
+                                    <img alt="AVAX" src="img/chains/avax.png" class="icon_img">
+                                </div>
+                            </div>
+                        </td>
+
+                        <td class="text-end">
+                            <div class="liquidity_column">
+                                <p>1,369,671,311.01</p>
+                            </div>
+                        </td>
+
+                        <td class="text-center" width="180">
+                            <div class="dropdown_column">
+                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" id="chain_dropup_0"
+                                    class="chain_dropup">
+                                    <path d="M11.4673 6L6.23364 1L0.999995 6" stroke="#388DFF"></path>
+                                </svg>
+                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" id="chain_dropdown_0"
+                                    class="chain_dropdown">
+                                    <path d="M0.97168 1L6.20532 6L11.439 1" stroke="#2F80ED"></path>
+                                </svg>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr id="chain_list_0" class="collapse">
+                        <td colspan="4" class="dropdown_container">
+                            <div class="dropdown_item">
+                                <div class="chain">
+                                    <img alt="ETH" src="img/chains/eth.svg" class="image">
+                                    <span class="label">Ethereum</span>
+                                </div>
+                                <div class="detail">
+                                    <div class="detail_share">
+                                        <p class="text text-start">Your Pool Share: </p>
+                                        <p class="text text-md-end">0.00</p>
+                                    </div>
+
+                                    <div class="detail_pool">
+                                        <p class="text text-start">Pool: </p>
+                                        <p class="text text-md-end">1,369,671,311.01</p>
+                                    </div>
+                                </div>
+                                <div class="action">
+                                    <div class="action_buttons">
+                                        <button type="button" data-bs-toggle="modal"
+                                            data-bs-target="#connectWalletModal">
+                                            Connect Wallet
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown_item">
+                                <div class="chain">
+                                    <img alt="BSC" src="img/chains/bnb.svg" class="image">
+                                    <span class="label">BSC</span>
+                                </div>
+                                <div class="detail">
+                                    <div class="detail_share">
+                                        <p class="text text-start">Your Pool Share: </p>
+                                        <p class="text text-md-end">0.00</p>
+                                    </div>
+
+                                    <div class="detail_pool">
+                                        <p class="text text-start">Pool: </p>
+                                        <p class="text text-md-end">Unlimited</p>
+                                    </div>
+                                </div>
+                                <div class="action">
+                                    <div class="action_buttons">
+                                        <button type="button" data-bs-toggle="modal"
+                                            data-bs-target="#connectWalletModal">
+                                            Connect Wallet
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown_item">
+                                <div class="chain">
+                                    <img alt="MATIC" src="img/chains/polygon.png" class="image">
+                                    <span class="label">Polygon</span>
+                                </div>
+                                <div class="detail">
+                                    <div class="detail_share">
+                                        <p class="text text-start">Your Pool Share: </p>
+                                        <p class="text text-md-end">0.00</p>
+                                    </div>
+
+                                    <div class="detail_pool">
+                                        <p class="text text-start">Pool: </p>
+                                        <p class="text text-md-end">Unlimited</p>
+                                    </div>
+                                </div>
+                                <div class="action">
+                                    <div class="action_buttons">
+                                        <button type="button" data-bs-toggle="modal"
+                                            data-bs-target="#connectWalletModal">
+                                            Connect Wallet
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+
+                <!-- USDC -->
+                <tbody class="table_body">
+                    <tr class="collapsing_tr collapsed" data-bs-toggle="collapse" data-bs-target="#chain_list_1"
+                        aria-expanded="false" aria-controls="chain_list_1">
+                        <td width="150" class="text-start">
+                            <div class="token_column">
+                                <div class="token_img_container">
+                                    <img src="img/chains/usdc.webp" alt="USDC" class="token_img">
+                                </div>
+                                <div class="token_text">
+                                    <h3>USDC</h3>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td class="text-start hideSmall">
+                            <div class="chain_column">
+                                <div title="ETH" class="chain_img_container">
+                                    <img alt="ETH" src="img/chains/eth.svg" class="icon_img">
+                                </div>
+                                <div title="BNB" class="chain_img_container">
+                                    <img alt="BNB" src="img/chains/bnb.svg" class="icon_img">
+                                </div>
+                                <div title="OKT" class="chain_img_container">
+                                    <img alt="OKT" src="img/chains/okt.png" class="icon_img">
+                                </div>
+                                <div title="MATIC" class="chain_img_container">
+                                    <img alt="MATIC" src="img/chains/polygon.png" class="icon_img">
+                                </div>
+                                <div title="FTM" class="chain_img_container">
+                                    <img alt="FTM" src="img/chains/ftm.png" class="icon_img">
+                                </div>
+                                <div title="ARBITRUM" class="chain_img_container">
+                                    <img alt="ARBITRUM" src="img/chains/arbitrum.png" class="icon_img">
+                                </div>
+                                <div title="AVAX" class="chain_img_container">
+                                    <img alt="AVAX" src="img/chains/avax.png" class="icon_img">
+                                </div>
+                            </div>
+                        </td>
+
+                        <td class="text-end">
+                            <div class="liquidity_column">
+                                <p>1,369,671,311.01</p>
+                            </div>
+                        </td>
+
+                        <td class="text-center" width="180">
+                            <div class="dropdown_column">
+                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" id="chain_dropup_1"
+                                    class="chain_dropup">
+                                    <path d="M11.4673 6L6.23364 1L0.999995 6" stroke="#388DFF"></path>
+                                </svg>
+                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" id="chain_dropdown_1"
+                                    class="chain_dropdown">
+                                    <path d="M0.97168 1L6.20532 6L11.439 1" stroke="#2F80ED"></path>
+                                </svg>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr id="chain_list_1" class="collapse">
+                        <td colspan="4" class="dropdown_container">
+                            <div class="dropdown_item">
+                                <div class="chain">
+                                    <img alt="ETH" src="img/chains/eth.svg" class="image">
+                                    <span class="label">Ethereum</span>
+                                </div>
+                                <div class="detail">
+                                    <div class="detail_share">
+                                        <p class="text text-start">Your Pool Share: </p>
+                                        <p class="text text-md-end">0.00</p>
+                                    </div>
+
+                                    <div class="detail_pool">
+                                        <p class="text text-start">Pool: </p>
+                                        <p class="text text-md-end">20,688,933.59</p>
+                                    </div>
+                                </div>
+                                <div class="action">
+                                    <div class="action_buttons">
+                                        <button type="button" data-bs-toggle="modal"
+                                            data-bs-target="#connectWalletModal">
+                                            Connect Wallet
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown_item">
+                                <div class="chain">
+                                    <img alt="BSC" src="img/chains/bnb.svg" class="image">
+                                    <span class="label">BSC</span>
+                                </div>
+                                <div class="detail">
+                                    <div class="detail_share">
+                                        <p class="text text-start">Your Pool Share: </p>
+                                        <p class="text text-md-end">0.00</p>
+                                    </div>
+
+                                    <div class="detail_pool">
+                                        <p class="text text-start">Pool: </p>
+                                        <p class="text text-md-end">16,624.22</p>
+                                    </div>
+                                </div>
+                                <div class="action">
+                                    <div class="action_buttons">
+                                        <button type="button" data-bs-toggle="modal"
+                                            data-bs-target="#connectWalletModal">
+                                            Connect Wallet
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown_item">
+                                <div class="chain">
+                                    <img alt="OKT" src="img/chains/polygon.png" class="image">
+                                    <span class="label">OEC</span>
+                                </div>
+                                <div class="detail">
+                                    <div class="detail_share">
+                                        <p class="text text-start">Your Pool Share: </p>
+                                        <p class="text text-md-end">0.00</p>
+                                    </div>
+
+                                    <div class="detail_pool">
+                                        <p class="text text-start">Pool: </p>
+                                        <p class="text text-md-end">6.28</p>
+                                    </div>
+                                </div>
+                                <div class="action">
+                                    <div class="action_buttons">
+                                        <button type="button" data-bs-toggle="modal"
+                                            data-bs-target="#connectWalletModal">
+                                            Connect Wallet
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+
+                <!-- USDT -->
+                <tbody class="table_body">
+                    <tr class="collapsing_tr collapsed" data-bs-toggle="collapse" data-bs-target="#chain_list_2"
+                        aria-expanded="false" aria-controls="chain_list_2">
+                        <td width="150" class="text-start">
+                            <div class="token_column">
+                                <div class="token_img_container">
+                                    <img src="img/chains/mim.webp" alt="MIM" class="token_img">
+                                </div>
+                                <div class="token_text">
+                                    <h3>USDT</h3>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td class="text-start hideSmall">
+                            <div class="chain_column">
+                                <div title="ETH" class="chain_img_container">
+                                    <img alt="ETH" src="img/chains/eth.svg" class="icon_img">
+                                </div>
+                                <div title="BNB" class="chain_img_container">
+                                    <img alt="BNB" src="img/chains/bnb.svg" class="icon_img">
+                                </div>
+                                <div title="MATIC" class="chain_img_container">
+                                    <img alt="MATIC" src="img/chains/polygon.png" class="icon_img">
+                                </div>
+                                <div title="FTM" class="chain_img_container">
+                                    <img alt="FTM" src="img/chains/ftm.png" class="icon_img">
+                                </div>
+                                <div title="OETH" class="chain_img_container">
+                                    <img alt="OETH" src="img/chains/oeth.png" class="icon_img">
+                                </div>
+                                <div title="MOVR" class="chain_img_container">
+                                    <img alt="MOVR" src="img/chains/movr.png" class="icon_img">
+                                </div>
+                                <div title="ARBITRUM" class="chain_img_container">
+                                    <img alt="ARBITRUM" src="img/chains/arbitrum.png" class="icon_img">
+                                </div>
+                                <div title="AVAX" class="chain_img_container">
+                                    <img alt="AVAX" src="img/chains/avax.png" class="icon_img">
+                                </div>
+                            </div>
+                        </td>
+
+                        <td class="text-end">
+                            <div class="liquidity_column">
+                                <p>1,369,671,311.01</p>
+                            </div>
+                        </td>
+
+                        <td class="text-center" width="180">
+                            <div class="dropdown_column">
+                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" id="chain_dropup_2"
+                                    class="chain_dropup">
+                                    <path d="M11.4673 6L6.23364 1L0.999995 6" stroke="#388DFF"></path>
+                                </svg>
+                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" id="chain_dropdown_2"
+                                    class="chain_dropdown">
+                                    <path d="M0.97168 1L6.20532 6L11.439 1" stroke="#2F80ED"></path>
+                                </svg>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr id="chain_list_2" class="collapse">
+                        <td colspan="4" class="dropdown_container">
+                            <div class="dropdown_item">
+                                <div class="chain">
+                                    <img alt="ETH" src="img/chains/eth.svg" class="image">
+                                    <span class="label">Ethereum</span>
+                                </div>
+                                <div class="detail">
+                                    <div class="detail_share">
+                                        <p class="text text-start">Your Pool Share: </p>
+                                        <p class="text text-md-end">0.00</p>
+                                    </div>
+
+                                    <div class="detail_pool">
+                                        <p class="text text-start">Pool: </p>
+                                        <p class="text text-md-end">1,369,671,311.01</p>
+                                    </div>
+                                </div>
+                                <div class="action">
+                                    <div class="action_buttons">
+                                        <button type="button" data-bs-toggle="modal"
+                                            data-bs-target="#connectWalletModal">
+                                            Connect Wallet
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown_item">
+                                <div class="chain">
+                                    <img alt="BSC" src="img/chains/bnb.svg" class="image">
+                                    <span class="label">BSC</span>
+                                </div>
+                                <div class="detail">
+                                    <div class="detail_share">
+                                        <p class="text text-start">Your Pool Share: </p>
+                                        <p class="text text-md-end">0.00</p>
+                                    </div>
+
+                                    <div class="detail_pool">
+                                        <p class="text text-start">Pool: </p>
+                                        <p class="text text-md-end">Unlimited</p>
+                                    </div>
+                                </div>
+                                <div class="action">
+                                    <div class="action_buttons">
+                                        <button type="button" data-bs-toggle="modal"
+                                            data-bs-target="#connectWalletModal">
+                                            Connect Wallet
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown_item">
+                                <div class="chain">
+                                    <img alt="MATIC" src="img/chains/polygon.png" class="image">
+                                    <span class="label">Polygon</span>
+                                </div>
+                                <div class="detail">
+                                    <div class="detail_share">
+                                        <p class="text text-start">Your Pool Share: </p>
+                                        <p class="text text-md-end">0.00</p>
+                                    </div>
+
+                                    <div class="detail_pool">
+                                        <p class="text text-start">Pool: </p>
+                                        <p class="text text-md-end">Unlimited</p>
+                                    </div>
+                                </div>
+                                <div class="action">
+                                    <div class="action_buttons">
+                                        <button type="button" data-bs-toggle="modal"
+                                            data-bs-target="#connectWalletModal">
+                                            Connect Wallet
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- MODALS ---------------->
+            <!-- etherium modal ----------->
+            <div class="modal fade etherium" id="mainnetModal" tabindex="-1" aria-labelledby="mainnetModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="mainnetModalLabel">
+                                Switch to
+                            </h5>
+                            <button type="button" class="close_button" data-bs-dismiss="modal" aria-label="Close">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#fff"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="mainnets d-flex flex-column justify-content-center align-items-center mt-0">
+                                <button class="d-flex justify-content-between align-items-center active">
+                                    <div class="left_item">
+                                        <div class="left_item_image d-flex justify-content-center align-items-center">
+                                            <img alt="ETH" src="img/chains/eth.svg">
+                                        </div>
+                                        <div id="chain_list_name_1" class="chain_list_name d-flex align-items-center">
+                                            <div class="active_signal"></div>
+                                            <p class="mb-0">
+                                                Ethereum mainnet
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" id="chain_list_set_1" class="settings_icon">
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path
+                                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                                        </path>
+                                    </svg>
+                                </button>
+
+                                <button class="d-flex justify-content-between align-items-center">
+                                    <div class="left_item">
+                                        <div class="left_item_image d-flex justify-content-center align-items-center">
+                                            <img alt="AVAX" src="img/chains/avax.png">
+                                        </div>
+                                        <div id="chain_list_name_1" class="chain_list_name d-flex align-items-center">
+                                            <div class="active_signal"></div>
+                                            <p class="mb-0">
+                                                Avalanche mainnet
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" id="chain_list_set_1" class="settings_icon">
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path
+                                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                                        </path>
+                                    </svg>
+                                </button>
+
+                                <button class="d-flex justify-content-between align-items-center">
+                                    <div class="left_item">
+                                        <div class="left_item_image d-flex justify-content-center align-items-center">
+                                            <img alt="ARBITRUM" src="img/chains/arbitrum.png">
+                                        </div>
+                                        <div id="chain_list_name_1" class="chain_list_name d-flex align-items-center">
+                                            <div class="active_signal"></div>
+                                            <p class="mb-0">
+                                                Arbitrum mainnet
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" id="chain_list_set_1" class="settings_icon">
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path
+                                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                                        </path>
+                                    </svg>
+                                </button>
+
+                                <button class="d-flex justify-content-between align-items-center">
+                                    <div class="left_item">
+                                        <div class="left_item_image d-flex justify-content-center align-items-center">
+                                            <img alt="BSC" src="img/chains/bnb.svg">
+                                        </div>
+                                        <div id="chain_list_name_1" class="chain_list_name d-flex align-items-center">
+                                            <div class="active_signal"></div>
+                                            <p class="mb-0">
+                                                BSC mainnet
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" id="chain_list_set_1" class="settings_icon">
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path
+                                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                                        </path>
+                                    </svg>
+                                </button>
+
+                                <button class="d-flex justify-content-between align-items-center">
+                                    <div class="left_item">
+                                        <div class="left_item_image d-flex justify-content-center align-items-center">
+                                            <img alt="FTM" src="img/chains/ftm.png">
+                                        </div>
+                                        <div id="chain_list_name_1" class="chain_list_name d-flex align-items-center">
+                                            <div class="active_signal"></div>
+                                            <p class="mb-0">
+                                                Fantom mainnet
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" id="chain_list_set_1" class="settings_icon">
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path
+                                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                                        </path>
+                                    </svg>
+                                </button>
+
+                                <button class="d-flex justify-content-between align-items-center">
+                                    <div class="left_item">
+                                        <div class="left_item_image d-flex justify-content-center align-items-center">
+                                            <img alt="" src="img/chains/polygon.png">
+                                        </div>
+                                        <div id="chain_list_name_1" class="chain_list_name d-flex align-items-center">
+                                            <div class="active_signal"></div>
+                                            <p class="mb-0">
+                                                Polygon mainnet
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" id="chain_list_set_1" class="settings_icon">
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path
+                                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                                        </path>
+                                    </svg>
+                                </button>
+
+                                <button class="d-flex justify-content-between align-items-center">
+                                    <div class="left_item">
+                                        <div class="left_item_image d-flex justify-content-center align-items-center">
+                                            <img alt="Moonbeam" src="img/chains/moon-beam.png">
+                                        </div>
+                                        <div id="chain_list_name_1" class="chain_list_name d-flex align-items-center">
+                                            <div class="active_signal"></div>
+                                            <p class="mb-0">
+                                                Moonbeam mainnet
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" id="chain_list_set_1" class="settings_icon">
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path
+                                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                                        </path>
+                                    </svg>
+                                </button>
+
+                                <button class="d-flex justify-content-between align-items-center">
+                                    <div class="left_item">
+                                        <div class="left_item_image d-flex justify-content-center align-items-center">
+                                            <img alt="Moonriver" src="img/chains/moon-river.png">
+                                        </div>
+                                        <div id="chain_list_name_1" class="chain_list_name d-flex align-items-center">
+                                            <div class="active_signal"></div>
+                                            <p class="mb-0">
+                                                Moonriver mainnet
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" id="chain_list_set_1" class="settings_icon">
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path
+                                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                                        </path>
+                                    </svg>
+                                </button>
+
+                                <button class="d-flex justify-content-between align-items-center">
+                                    <div class="left_item">
+                                        <div class="left_item_image d-flex justify-content-center align-items-center">
+                                            <img alt="Harmony" src="img/chains/harmony.png">
+                                        </div>
+                                        <div id="chain_list_name_1" class="chain_list_name d-flex align-items-center">
+                                            <div class="active_signal"></div>
+                                            <p class="mb-0">
+                                                Harmony mainnet
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" id="chain_list_set_1" class="settings_icon">
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path
+                                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                                        </path>
+                                    </svg>
+                                </button>
+
+                                <button class="d-flex justify-content-between align-items-center">
+                                    <div class="left_item">
+                                        <div class="left_item_image d-flex justify-content-center align-items-center">
+                                            <img alt="Aurora" src="img/chains/aurora.png">
+                                        </div>
+                                        <div id="chain_list_name_1" class="chain_list_name d-flex align-items-center">
+                                            <div class="active_signal"></div>
+                                            <p class="mb-0">
+                                                Aurora mainnet
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" id="chain_list_set_1" class="settings_icon">
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path
+                                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                                        </path>
+                                    </svg>
+                                </button>
+
+                                <button class="d-flex justify-content-between align-items-center">
+                                    <div class="left_item">
+                                        <div class="left_item_image d-flex justify-content-center align-items-center">
+                                            <img alt="OETH" src="img/chains/oeth.png">
+                                        </div>
+                                        <div id="chain_list_name_1" class="chain_list_name d-flex align-items-center">
+                                            <div class="active_signal"></div>
+                                            <p class="mb-0">
+                                                Boba mainnet
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" id="chain_list_set_1" class="settings_icon">
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path
+                                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- connect wallet modal ----------->
+            <!-- first -->
+            <div class="modal fade connect" id="connectWalletModal" tabindex="-1"
+                aria-labelledby="connectWalletModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="connectWalletModalLabel">
+                                Connect to a wallet
+                            </h5>
+                            <button type="button" class="close_button" data-bs-dismiss="modal" aria-label="Close">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#fff"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="modal_content_container d-flex justify-content-between align-items-center p-3 mt-0"
+                                data-bs-toggle="modal" href="#initializeModal" role="button">
+                                <h6 class="mb-0">WalletConnect</h6>
+                                <img src="img/chains/wallet-connect.svg" alt="wallet connect icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- second -->
+            <div class="modal fade initialize" id="initializeModal" tabindex="-1" aria-labelledby="initializeModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="initializeModalLabel" data-bs-toggle="modal"
+                                data-bs-target="#connectWalletModal" data-bs-dismiss="modal">
+                                Back
+                            </h5>
+                            <button type="button" class="close_button" data-bs-dismiss="modal" aria-label="Close">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#fff"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div
+                                class="modal_content_container d-flex justify-content-center align-items-center p-3 mt-0 mb-3">
+                                <h6 class="mb-0">Initializing...</h6>
+                            </div>
+
+                            <div class="modal_content_container d-flex justify-content-between align-items-center p-3">
+                                <div class="description d-flex flex-column flex-nowrap justify-content-center">
+                                    <h6 class="mb-0">WalletConnect</h6>
+                                    <p class="mb-0">
+                                        Connect to Trust Wallet, Rainbow Wallet and more...
+                                    </p>
+                                </div>
+                                <img src="img/chains/wallet-connect.svg" alt="wallet connect icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

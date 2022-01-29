@@ -1,0 +1,143 @@
+.navbar {
+    height: 70px;
+    margin: auto;
+    padding: 0rem 1rem;
+    background: #21263e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-collapse {
+    /* position: relative; */
+    flex-grow: initial;
+}
+
+.navbar-brand {
+    width: 260px;
+}
+
+.second-logo, .mode_icon.show_mobile {
+    display: none;
+}
+
+.nav-link {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 35px;
+    padding: 16px !important;
+    color: #979dac;
+    border: 2px solid transparent;
+    -o-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+
+.nav-link.active:hover, 
+.nav-link.active {
+    font-weight: 600;
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+.mode_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    width: 36px;
+    min-width: 36px;
+    border-radius: 9px;
+    margin-left: 15px;
+    background: rgb(43, 49, 79);
+    cursor: pointer;
+}
+
+.connect_button .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    background: #5f6bfb;
+    color: #f2f2f2;
+    border: 1px solid #4654fa;
+    border-radius: 12px;
+    padding: 0.45rem 0.75rem;
+    max-width: 320px;
+    text-align: center;
+    outline: none;
+}
+
+.connect_button .btn:first-child {
+    background: rgba(243, 132, 30, 0.05);
+    border: 1px solid transparent;
+}
+
+.connect_button .btn:nth-child(2):hover {
+    background: #4654fa;
+}
+
+@media screen and (max-width: 1270px) {
+    .navbar-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0.5rem 1rem;
+
+        background: #21263e;
+        width: 100%;
+        box-shadow: rgb(5 6 13 / 24%) 7px 2px 26px 0px;
+        overflow: auto;
+    }
+
+    .nav-link {
+        font-weight: 500;
+        font-size: 0.875rem;
+        width: 100%;
+        min-width: 130px;
+        height: 48px;
+        line-height: 1rem;
+        margin: 0px;
+        padding: 1rem 0.875rem;
+        outline: none;
+        border-radius: 9px;        
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+    }
+
+    .nav-link.active:hover, 
+    .nav-link.active {
+        background: linear-gradient(to right, rgb(115, 76, 226), rgb(96, 107, 251));
+        border-bottom: none;
+        box-shadow: rgb(115 75 226 / 51%) 0px 0.25rem 0.75rem 0px;
+    }
+}
+
+
+@media screen and (max-width: 426px) {
+    .navbar-brand {
+        width: 70px;
+    }
+
+    .first-logo, .mode_icon.hide_mobile {
+        display: none;
+    }
+
+    .second-logo, .mode_icon.show_mobile {
+        display: flex;
+    }
+
+    .connect_button {
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 30px auto 0;
+    }
+}
