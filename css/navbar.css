@@ -97,7 +97,7 @@
         font-weight: 500;
         font-size: 0.875rem;
         width: 100%;
-        min-width: 130px;
+        min-width: 140px;
         height: 48px;
         line-height: 1rem;
         margin: 0px;
@@ -122,14 +122,14 @@
 
 @media screen and (max-width: 426px) {
     .navbar-brand {
-        width: 70px;
+        width: 160px;
     }
 
-    .first-logo, .mode_icon.hide_mobile {
+    .mode_icon.hide_mobile {
         display: none;
     }
 
-    .second-logo, .mode_icon.show_mobile {
+    .mode_icon.show_mobile {
         display: flex;
     }
 
@@ -139,5 +139,19 @@
         left: 0;
         right: 0;
         margin: 30px auto 0;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .navbar-brand {
+        width: 70px;
+    }
+
+    .first-logo {
+        display: none;
+    }
+
+    .second-logo {
+        display: flex;
     }
 }

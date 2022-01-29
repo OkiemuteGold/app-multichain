@@ -40,7 +40,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px 40px;
+    padding: 1rem 2.5rem;
     margin: 50px auto;
     border-radius: 12px;
     box-shadow: rgb(0 0 0 / 6%) 0.4375rem 0.125rem 1.625rem 0px;
@@ -448,7 +448,7 @@ tr.collapsed .dropdown_column .chain_dropdown {
 
 @media screen and (max-width: 769px) {
     .all_tokens_container {
-        padding: 16px;
+        padding: 1rem;
     }
     
     .hideSmall {
